@@ -57,6 +57,7 @@ body {
     flex-shrink: 0;
     min-height: 200vh;
     padding: 40px;
+    border-right: solid 2px var(--accent);
 }
 
 a {
@@ -337,7 +338,7 @@ h2, h3 {
     background: #0f0f0f;
     border-radius: 0px;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .window-bar {
