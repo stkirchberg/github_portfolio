@@ -1,9 +1,9 @@
 :root {
-    --bg: #1a1b26;
-    --fg: #a9b1d6;
-    --accent: #7aa2f7;
+    --bg: #121212;
+    --fg: #D9D9D9;
+    --accent: #1793D1;
     --border: #414868;
-    --tile-bg: #24283b;
+    --tile-bg: #242424;
 }
 
 body {
@@ -12,6 +12,10 @@ body {
     font-family: 'JetBrains Mono', monospace;
     margin: 0;
     padding: 20px;
+}
+
+h1 {
+    font-size: 1.8em;
 }
 
 .tiling-container {
@@ -44,6 +48,20 @@ body {
 .cursor {
     animation: blink 1s infinite;
     color: var(--accent);
+}
+
+.typewriter::after {
+    content: "_";
+    color: #1793D1;
+    animation: blink 0.5s step-end infinite;
+}
+
+.typewriter.typed-done::after {
+    display: none;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
 }
 
 @keyframes blink { 50% { opacity: 0; } }
