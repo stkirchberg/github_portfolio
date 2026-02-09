@@ -170,7 +170,7 @@ h2, h3 {
     font-weight: 600;
 }
 
-.subtext {
+.subtextOne {
     font-size: 0.85rem;
     color: var(--accent);
     display: block;
