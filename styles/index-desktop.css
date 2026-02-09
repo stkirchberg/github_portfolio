@@ -10,7 +10,7 @@ body {
     color: var(--fg);
     font-family: 'JetBrains Mono';
     margin: 0;
-    padding: 20px;
+    padding: 0;
 }
 
 a {
@@ -39,7 +39,51 @@ h3 {
     max-width: 600px;
     background-color: var(--bg);
     align-items: center;
+    height: 100vh;
+    width: 600px;
 }
+
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-link {
+    color: #a9abaf;
+    text-decoration: none;
+    padding: 10px 25px;
+    font-family: 'Terminus', monospace;
+    transition: color 0.3s;
+    z-index: 2;
+}
+
+.nav-indicator-active, .nav-indicator-hover {
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+.nav-indicator-active {
+    background-color: var(--accent);
+    z-index: 3;
+}
+
+.nav-indicator-hover {
+    background-color: rgba(169, 171, 175, 0.5);
+    opacity: 0;
+    z-index: 1;
+}
+
+.nav-container:hover .nav-indicator-hover {
+    opacity: 1;
+}
+
 
 
 .logo {

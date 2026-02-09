@@ -1,16 +1,38 @@
-const typeAll = async () => {
-    const elements = document.querySelectorAll('.typewriter');
-    
-    for (const el of elements) {
-        const text = el.getAttribute('data-text');
-        
-        for (let i = 0; i <= text.length; i += 1) {
-            el.textContent = text.substring(0, i);
-            await new Promise(resolve => setTimeout(resolve, 1));
-        }
-        el.textContent = text;
-        el.classList.add('typed-done');
-    }
-};
+const links = document.querySelectorAll('.nav-link');
+const activeInd = document.querySelector('.nav-indicator-active');
+const hoverInd = document.querySelector('.nav-indicator-hover');
+const sections = document.querySelectorAll('section'); // Deine Sektionen brauchen IDs (about, projects, etc.)
 
-document.addEventListener('DOMContentLoaded', typeAll);
+function moveIndicator(element, indicator) {
+    if (element) {
+        indicator.style.width = `${element.offsetWidth}px`;
+        indicator.style.left = `${element.offsetLeft}px`;
+    }
+}
+
+links.forEach(link => {
+    link.addEventListener('mouseenter', () => moveIndicator(link, hoverInd));
+});
+
+window.addEventListener('scroll', () => {
+    let current = "";
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 100) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    links.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+            link.classList.add('active');
+            moveIndicator(link, activeInd);
+        }
+    });
+});
+
+window.addEventListener('load', () => {
+    const initialActive = document.querySelector('.nav-link.active');
+    moveIndicator(initialActive, activeInd);
+});
