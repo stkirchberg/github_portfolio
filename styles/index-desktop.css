@@ -53,6 +53,8 @@ body {
     border-right: solid 2px var(--accent);
     border-left: solid 2px var(--accent);
     overflow-y: auto;
+    padding-bottom: 40px;
+    box-sizing: border-box;
 }
 
 .right {
@@ -175,21 +177,6 @@ h2, h3 {
     color: var(--accent);
     display: block;
     margin-top: 4px;
-}
-
-.left {
-    position: sticky;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--bg);
-    align-items: center;
-    width: 600px;
-    height: 100vh;
-    flex-shrink: 0;
-    border-right: solid 2px var(--accent);
-    padding-bottom: 40px;
-    box-sizing: border-box;
 }
 
 .social-links {
