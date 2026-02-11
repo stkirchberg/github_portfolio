@@ -33,10 +33,6 @@ window.addEventListener('scroll', () => {
     });
 });
 
-window.addEventListener('load', () => {
-    const initialActive = document.querySelector('.nav-link.active');
-    moveIndicator(initialActive, activeInd);
-});
 
 document.querySelector('.whatsapp-link').addEventListener('click', (e) => {
     e.preventDefault();
@@ -45,4 +41,108 @@ document.querySelector('.whatsapp-link').addEventListener('click', (e) => {
 window.addEventListener('mousemove', (e) => {
     document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
     document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
+});
+
+
+
+
+const translations = {
+    de: {
+        nav_about: "Info",
+        nav_skills: "Wissen",
+        nav_projects: "Arbeit",
+        nav_contact: "Kontakt",
+
+        bio_dev: "Ich bin <span class='highlight'>Fullstack-Entwickler</span>.",
+        bio_linux: "Mit einer Vorliebe für <span class='highlight'>Linux</span>.",
+        bio_crypto: "Und einem speziellen Interesse an <span class='highlight'>Kryptographie</span>.",
+        whatsapp_popup: "WhatsApp ist absoluter Müll.<br>Nutzen Sie Telegram.",
+
+        about_p1: "<p>Mit <span class='highlight'>11 Jahren</span> begann ich, <span class='highlight'>Java</span> und <span class='highlight'>Python</span> parallel zu lernen. <br>Mit <span class='highlight'>13</span> fand ich mein Interesse an Webentwicklung, entwickle Portale, Spiele und Websites.</p>",
+        about_p2: "<p>Mit 15 Jahren wechselte ich auf <span class='highlight'>Arch Linux</span>. Das war ein prägender Moment für mich.<br>Ich habe inzwischen etliche Linux Distributionen für Bekannte und Familie konfiguriert – ich selbst bleibe allerdings meinem Arch treu.<br>Dazu kam wenig später die Faszination für <span class='highlight'>Kryptographie</span>. Das überrascht mich noch am meisten - für mich waren Leute mit dem Interesse früher die absoluten Nerds, die ungeduscht in ihrem Keller sitzen. Dabei ist es eigentlich die schönste und eleganteste Verknüpfung zwischen Mathematik, Informatik und Privatsphäre.</p>",
+        about_p3: "<p>Wenn mein Rechner aus ist, bin ich meist <span class='highlight'>draußen</span>.<br> Entweder auf dem Rennrad, beim Wandern oder ich schraube an meinem <span class='highlight'>100ccm Motorfahrrad</span>. <br>Meine Künste als Mechaniker lassen zwar zu wünschen übrig - aber letztenlich ist beides Handwerk. Software und Mechanik.</p>",
+
+        skill_web_title: "Web-Entwicklung",
+        skill_web_desc: "Moderne Applikationen, responsive Frontends und skalierbare Backends.",
+        skill_soft_title: "Software & Architektur",
+        skill_soft_desc: "Systemnahe Programmierung, objektorientiertes Design und Git-Workflows.",
+        skill_env_title: "Systemadministration",
+        skill_env_desc: "Linux-Expertise, automatisierte Deployments und System-Hardening.",
+
+        proj_games_desc: "Telegram-Mini-App.<br>Minimalistisch, schnell, kein unnötiger Ballast.",
+        proj_grit_desc: "Performance-optimierte Seite für eine Naturheilpraxis.<br>Sauberes UI und schnelle Assets.",
+        proj_knot_desc: "Networking-Tool mit Telegram als Transport-Layer.<br>Token-Auth und SQLite-Backend.",
+
+        contact_welcome: "Interaktives Kontaktmodul gestartet. Verbindung steht...",
+        contact_last: "Last login:",
+        contact_social_title: "[ Socials & Messaging ]",
+        whatsapp_request: "Nur auf Anfrage (Telegram bevorzugt)",
+        contact_status: "# Status: Bereit für neue Projekte und Kollabos.",
+        contact_echo: "echo \"Schreiben Sie mir!\""
+    },
+
+
+    en: {
+        nav_about: "About",
+        nav_skills: "Skills",
+        nav_projects: "Projects",
+        nav_contact: "Contact",
+
+        bio_dev: "I am a <span class='highlight'>fullstack developer</span>.",
+        bio_linux: "With a penchant for <span class='highlight'>Linux</span>.",
+        bio_crypto: "And a special interest in <span class='highlight'>cryptography</span>.",
+        whatsapp_popup: "WhatsApp sucks most.<br>Use Telegram.",
+        about_p1: "<p>My journey began at the age of <span class='highlight'>11</span>, when I started diving into <span class='highlight'>Java</span> and <span class='highlight'>Python</span> simultaneously. <br>By <span class='highlight'>13</span>, I had found my passion for web development, building the foundations of the digital world I inhabit today.</p>",
+        about_p2: "<p>A defining moment in my technical evolution was switching to <span class='highlight'>Arch Linux</span> at age 15. <br>Since then, I’ve navigated through numerous distributions, configuring and deploying systems for myself and others. <br>I also developed a deep fascination for <span class='highlight'>cryptography</span>—realizing that what I once thought was reserved for 'basement-dwelling nerds' is actually one of the most elegant intersections of math and privacy.</p>",
+        about_p3: "<p>When the screen goes off, I’m usually <span class='highlight'>outside</span>.<br> Whether I'm pushing miles on my road bike, hiking through nature, or tinkering with my custom <span class='highlight'>100cc motorized bicycle</span>, I treat every machine with the same precision I apply to my code. <br>For me, software and mechanics are both a craft.</p>",
+        
+        skill_web_title: "Frontend & Backend",
+        skill_web_desc: "Developing modern, responsive web applications and robust server-side logic.",
+        skill_soft_title: "Software & Systems",
+        skill_soft_desc: "Learning low-level programming, object-oriented software design, and version control.",
+        skill_env_title: "Environment",
+        skill_env_desc: "Expertise in Linux distributions, including custom deployments and system hardening.",
+        
+        proj_games_desc: "A bespoke website for Telegram mini-games.<br>Focus on minimalist aesthetics and optimized performance.",
+        proj_grit_desc: "A high-performance website designed for a naturopathic practice.<br>Focus on responsive UI and seamless user experience.",
+        proj_knot_desc: "A private networking tool leveraging Telegram as a transport layer.<br>Features token-based authentication and SQLite storage.",
+        
+        contact_welcome: "Welcome to the interactive contact module. Establishing secure connection...",
+        contact_last: "Last login:",
+        contact_social_title: "[ Social & Instant Messaging ]",
+        whatsapp_request: "Available upon request (Telegram preferred)",
+        contact_status: "# Status: Open for new opportunities and collaborations.",
+        contact_echo: "echo \"Looking forward to hearing from you!\""
+    }
+};
+
+const langToggle = document.getElementById('lang-toggle');
+
+function updateLanguage(lang) {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+            el.innerHTML = translations[lang][key];
+        }
+    });
+    document.documentElement.lang = lang;
+    localStorage.setItem('preferred-lang', lang);
+    
+    const initialActive = document.querySelector('.nav-link.active');
+    setTimeout(() => moveIndicator(initialActive, activeInd), 50);
+}
+
+langToggle.addEventListener('change', () => {
+    const newLang = langToggle.checked ? 'de' : 'en';
+    updateLanguage(newLang);
+});
+
+
+window.addEventListener('load', () => {
+    const savedLang = localStorage.getItem('preferred-lang') || 'en';
+    langToggle.checked = (savedLang === 'de');
+    updateLanguage(savedLang);
+
+    const initialActive = document.querySelector('.nav-link.active');
+    moveIndicator(initialActive, activeInd);
 });

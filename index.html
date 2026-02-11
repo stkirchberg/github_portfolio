@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -21,10 +21,10 @@
     <div class="left">
         <header>
             <nav class="nav-container">
-                <a href="#about" class="nav-link active">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#about" class="nav-link active" data-i18n="nav_about">About</a>
+                <a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a>
+                <a href="#projects" class="nav-link" data-i18n="nav_projects">Projects</a>
+                <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
         
                 <span class="nav-indicator-hover"></span>
                 <span class="nav-indicator-active"></span>
@@ -33,7 +33,7 @@
 
         <div class="title">
             <div class="logo">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/#\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/###\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/#####\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/#######\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_&nbsp;"=######\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/##=,_\#####\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/#############\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/###############\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/#################\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/###################\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/########*"""*########\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/#######/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\#######\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/########&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;########\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/#########&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;######m=,_<br>&nbsp;&nbsp;&nbsp;&nbsp;/##########&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;##########\<br>&nbsp;&nbsp;&nbsp;/######***&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***######\<br>&nbsp;&nbsp;/###**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**###\<br>&nbsp;/**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/#\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/###\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/#####\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/#######\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_&nbsp;"=######\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/##=,_\#####\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/#############\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/###############\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/#################\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/###################\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/########*..."*########\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/#######/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\#######\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/########&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;########\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/#########&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;######m=,_<br>&nbsp;&nbsp;&nbsp;&nbsp;/##########&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;##########\<br>&nbsp;&nbsp;&nbsp;/######***&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***######\<br>&nbsp;&nbsp;/###**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**###\<br>&nbsp;/**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\\<br>
             </div>
 
             <div class="name-box">
@@ -42,11 +42,12 @@
             </div>
 
             <div class="bio">
-                <p>I am a <span class="highlight">fullstack developer</span>.</p>
-                <p>With a penchant for <span class="highlight">Linux</span>.<br>
+                <p data-i18n="bio_dev">I am a <span class="highlight">fullstack developer</span>.</p>
+                <p>
+                   <span data-i18n="bio_linux">With a penchant for <span class="highlight">Linux</span>.</span><br>
                    <span class="subtextOne">(I use Arch, btw.)</span>
                 </p>
-                <p>And a special interest in <span class="highlight">cryptography</span>.</p>
+                <p data-i18n="bio_crypto">And a special interest in <span class="highlight">cryptography</span>.</p>
             </div>
         </div>
 
@@ -65,7 +66,7 @@
                 <a href="#" class="whatsapp-link">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-11.7 8.38 8.38 0 0 1 3.8.9L21 3z"></path></svg>
                 </a>
-                <div class="whatsapp-popup">WhatsApp sucks most.<br>Use Telegram.</div>
+                <div class="whatsapp-popup" data-i18n="whatsapp_popup">WhatsApp sucks most.<br>Use Telegram.</div>
             </div>
             <a href="mailto:s.t.kirchberg@murena.io" title="Email">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
@@ -77,30 +78,45 @@
 
 
     <div class="right">
+            <div class="lang-switch-wrapper">
+                <span class="lang-label">EN</span>
+                <label class="switch">
+                    <input type="checkbox" id="lang-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="lang-label">DE</span>
+            </div>
+
             <section id="about" class="content-section">
                 <h2 class="section-title"><span class="prompt">~ $</span> cat about.txt</h2>
                 <div class="terminal-card">
-                    <p>
-                        My journey began at the age of <span class="highlight">11</span>, 
-                        when I started diving into <span class="highlight">Java</span> and <span class="highlight">Python</span> 
-                        simultaneously. <br>By <span class="highlight">13</span>, I had found my passion for web development, 
-                        building the foundations of the digital world I inhabit today.
-                    </p>
-                    <p>
-                        A defining moment in my technical evolution was switching to <span class="highlight">Arch Linux</span> 
-                        at age 15. <br>Since then, I’ve navigated through numerous distributions, configuring 
-                        and deploying systems for myself and others. <br>I also developed a deep fascination 
-                        for <span class="highlight">cryptography</span>—realizing that what I once thought was 
-                        reserved for "basement-dwelling nerds" is actually one of the most elegant 
-                        intersections of math and privacy.
-                    </p>
-                    <p>
-                        When the screen goes off, I’m usually <span class="highlight">outside</span>.<br> 
-                        Whether I'm pushing miles on my road bike, hiking through nature, or tinkering 
-                        with my custom <span class="highlight">100cc motorized bicycle</span>, 
-                        I treat every machine with the same precision I apply to my code. <br>
-                        For me, software and mechanics are both a craft.
-                    </p>
+                    <div data-i18n="about_p1">
+                        <p>
+                            My journey began at the age of <span class="highlight">11</span>, 
+                            when I started diving into <span class="highlight">Java</span> and <span class="highlight">Python</span> 
+                            simultaneously. <br>By <span class="highlight">13</span>, I had found my passion for web development, 
+                            building the foundations of the digital world I inhabit today.
+                        </p>
+                    </div>
+                    <div data-i18n="about_p2">
+                        <p>
+                            A defining moment in my technical evolution was switching to <span class="highlight">Arch Linux</span> 
+                            at age 15. <br>Since then, I’ve navigated through numerous distributions, configuring 
+                            and deploying systems for myself and others. <br>I also developed a deep fascination 
+                            for <span class="highlight">cryptography</span>—realizing that what I once thought was 
+                            reserved for "basement-dwelling nerds" is actually one of the most elegant 
+                            intersections of math and privacy.
+                        </p>
+                    </div>
+                    <div data-i18n="about_p3">
+                        <p>
+                            When the screen goes off, I’m usually <span class="highlight">outside</span>.<br> 
+                            Whether I'm pushing miles on my road bike, hiking through nature, or tinkering 
+                            with my custom <span class="highlight">100cc motorized bicycle</span>, 
+                            I treat every machine with the same precision I apply to my code. <br>
+                            For me, software and mechanics are both a craft.
+                        </p>
+                    </div>
                 </div>
             </section>
 
@@ -113,8 +129,8 @@
                         <img src="https://skillicons.dev/icons?i=html,css,js,py,flask,django" alt="Web Stack" />
                     </div>
                     <div class="skill-details">
-                        <h3>Frontend & Backend</h3>
-                        <p>Developing modern, responsive web applications and robust server-side logic.</p>
+                        <h3 data-i18n="skill_web_title">Frontend & Backend</h3>
+                        <p data-i18n="skill_web_desc">Developing modern, responsive web applications and robust server-side logic.</p>
                     </div>
                 </div>
 
@@ -123,8 +139,8 @@
                         <img src="https://skillicons.dev/icons?i=java,c,cpp,git,github,vscode" alt="Software Stack" />
                     </div>
                     <div class="skill-details">
-                        <h3>Software & Systems</h3>
-                        <p>Learning low-level programming, object-oriented software design, and version control.</p>
+                        <h3 data-i18n="skill_soft_title">Software & Systems</h3>
+                        <p data-i18n="skill_soft_desc">Learning low-level programming, object-oriented software design, and version control.</p>
                     </div>
                 </div>
 
@@ -133,8 +149,8 @@
                         <img src="https://skillicons.dev/icons?i=arch,linux" alt="OS Stack" />
                     </div>
                     <div class="skill-details">
-                        <h3>Environment</h3>
-                        <p>Expertise in Linux distributions, including custom deployments and system hardening.</p>
+                        <h3 data-i18n="skill_env_title">Environment</h3>
+                        <p data-i18n="skill_env_desc">Expertise in Linux distributions, including custom deployments and system hardening.</p>
                     </div>
                 </div>
             </div>
@@ -161,7 +177,7 @@
                                 <span>src</span>
                             </a>
                         </div>
-                        <p>A bespoke, high-performance website designed for a naturopathic practice.<br>Built with a focus on minimalist aesthetics, responsive UI components, and optimized asset delivery for a seamless user experience.</p>
+                        <p data-i18n="proj_games_desc">A bespoke, high-performance website designed for a naturopathic practice.<br>Built with a focus on minimalist aesthetics, responsive UI components, and optimized asset delivery for a seamless user experience.</p>
                         <div class="tech-specs">
                             <span>STACK: Python, HTML, CSS, JavaScript</span>
                         </div>
@@ -186,7 +202,7 @@
                                 <span>src</span>
                             </a>
                         </div>
-                        <p>A bespoke, high-performance website designed for a naturopathic practice.<br>Built with a focus on minimalist aesthetics, responsive UI components, and optimized asset delivery for a seamless user experience.</p>
+                        <p data-i18n="proj_grit_desc">A bespoke, high-performance website designed for a naturopathic practice.<br>Built with a focus on minimalist aesthetics, responsive UI components, and optimized asset delivery for a seamless user experience.</p>
                         <div class="tech-specs">
                             <span>STACK: HTML, CSS, JavaScript</span>
                         </div>
@@ -211,7 +227,7 @@
                                 <span>src</span>
                             </a>
                         </div>
-                        <p>A private networking tool leveraging Telegram as a transport layer.<br>Features token-based authentication, persistent SQLite storage, and automated message broadcasting under unique pseudonyms.</p>
+                        <p data-i18n="proj_knot_desc">A private networking tool leveraging Telegram as a transport layer.<br>Features token-based authentication, persistent SQLite storage, and automated message broadcasting under unique pseudonyms.</p>
                         <div class="tech-specs">
                             <span>STACK: Python, SQLite</span>
                         </div>
@@ -227,8 +243,8 @@
     
     <div class="terminal-card contact-full">
         <div class="terminal-welcome">
-            <p>Welcome to the interactive contact module. Establishing secure connection...</p>
-            <p>Last login: Mon Feb 09 17:05:22 2026 from 127.0.0.1</p>
+            <p data-i18n="contact_welcome">Welcome to the interactive contact module. Establishing secure connection...</p>
+            <p><span data-i18n="contact_last">Last login:</span> Mon Feb 09 17:05:22 2026 from 127.0.0.1</p>
         </div>
 
         <div class="contact-grid">
@@ -245,7 +261,7 @@
             </div>
 
             <div class="contact-category">
-                <h3 class="cat-title">[ Social & Instant Messaging ]</h3>
+                <h3 class="cat-title" data-i18n="contact_social_title">[ Social & Instant Messaging ]</h3>
                 <div class="contact-item">
                     <span class="label">Telegram:</span>
                     <a href="https://t.me/stk_22_05" target="_blank" class="link">@stk_22_05</a>
@@ -256,24 +272,22 @@
                 </div>
                 <div class="contact-item">
                     <span class="label">WhatsApp:</span>
-                    <span class="subtext">Available upon request (Telegram preferred)</span>
+                    <span class="subtext" data-i18n="whatsapp_request">Available upon request (Telegram preferred)</span>
                 </div>
             </div>
         </div>
 
         <div class="terminal-footer">
-            <p class="status-msg"># Status: Open for new opportunities and collaborations.</p>
+            <p class="status-msg" data-i18n="contact_status"># Status: Open for new opportunities and collaborations.</p>
             <div class="terminal-input">
                 <span class="prompt">stkirchberg@arch:~$</span>
-                <span class="typed-text">echo "Looking forward to hearing from you!"</span>
+                <span class="typed-text" data-i18n="contact_echo">echo "Looking forward to hearing from you!"</span>
                 <span class="cursor">█</span>
             </div>
         </div>
     </div>
 </section>
     </div>
-
-
 
     <script src="scripts/index.js"></script>
 </body>
