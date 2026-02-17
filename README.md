@@ -38,7 +38,7 @@ This project is open-source. Feel free to use it as a template for your own term
 ---
 
 
-# S. T. Kirchberg | Personal Portfolio
+# Deutsch
 
 Eine moderne, Terminal-orientierte persönliche Website, die mit Fokus auf eine Arch-Linux-Ästhetik entwickelt wurde. Sie richtet sich speziell an Linux-Enthusiasten und bietet eine zweisprachige Benutzeroberfläche (EN/DE), ein responsives Design über vier Breakpoints sowie eine interaktive UI.
 
