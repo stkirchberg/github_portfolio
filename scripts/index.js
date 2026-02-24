@@ -69,6 +69,7 @@ const translations = {
         skill_env_title: "Systemadministration",
         skill_env_desc: "Linux-Expertise, automatisierte Deployments und System-Hardening.",
 
+        proj_vincere_desc: "Dezentrale, null-governance Kommunikationsplattform im Tor-Netzwerk.<br>Mit eigener Schicht kryptographischer Primitives, Multi-Hop-Onion-Routing-Integration und strikt regeloser Protokollarchitektur für absolute Datensouveränität.",
         proj_games_desc: "Telegram-Mini-App.<br>Minimalistisch, schnell, kein unnötiger Ballast.",
         proj_grit_desc: "Performance-optimierte Seite für eine Naturheilpraxis.<br>Sauberes UI und schnelle Assets.",
         proj_knot_desc: "Networking-Tool mit Telegram als Transport-Layer.<br>Token-Auth und SQLite-Backend.",
@@ -103,6 +104,8 @@ const translations = {
         skill_env_title: "Environment",
         skill_env_desc: "Expertise in Linux distributions, including custom deployments and system hardening.",
         
+
+        proj_vincere_desc: "A decentralized, zero-governance communication platform operating within the Tor network.<br>Featuring a proprietary cryptographic primitives layer, multi-hop onion routing integration, and a strictly rule-less protocol architecture for absolute data sovereignty.",
         proj_games_desc: "A bespoke website for Telegram mini-games.<br>Focus on minimalist aesthetics and optimized performance.",
         proj_grit_desc: "A high-performance website designed for a naturopathic practice.<br>Focus on responsive UI and seamless user experience.",
         proj_knot_desc: "A private networking tool leveraging Telegram as a transport layer.<br>Features token-based authentication and SQLite storage.",
